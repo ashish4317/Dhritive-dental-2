@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhritvi Advanced Dental Care</title>
+    <link rel="stylesheet" href="Resources/Css/index.css">
+    <link rel="stylesheet" href="Vendrs/CSS/normalize.css">
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --primary-light: #e0f2fe;
+            --accent: #0ea5e9;
+            --secondary: #0f172a;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --border-color: #e2e8f0;
+            --radius-lg: 16px;
+            --radius-md: 10px;
+            --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+            --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
+            --shadow-lg: 0 20px 35px -10px rgba(2, 132, 199, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Site Header */
+        .site-header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-logo {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+        }
+
+        .brand-title {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--secondary);
+            letter-spacing: -0.5px;
+        }
+
+        .brand-title span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            background-color: var(--primary);
+            color: white !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: var(--radius-md);
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+            transition: all 0.2s ease !important;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: radial-gradient(circle at top right, rgba(14, 165, 233, 0.12), transparent 50%),
+                        linear-gradient(180deg, #ffffff 0%, var(--bg-main) 100%);
+            padding: 5rem 2rem 4rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(2, 132, 199, 0.2);
+        }
+
+        .hero h2 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: var(--secondary);
+            line-height: 1.15;
+            max-width: 800px;
+            margin: 0 auto 1.2rem auto;
+            letter-spacing: -1px;
+        }
+
+        .hero h2 span {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 620px;
+            margin: 0 auto 2.5rem auto;
+            font-weight: 400;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 0.9rem 2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 25px 40px -10px rgba(2, 132, 199, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--secondary);
+            padding: 0.9rem 2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #f1f5f9;
+            transform: translateY(-2px);
+        }
+
+        /* Stats Counter Strip */
+        .stats-banner {
+            max-width: 950px;
+            margin: -2rem auto 4rem auto;
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 1.8rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            position: relative;
+            z-index: 10;
+        }
+
+        .stat-item {
+            text-align: center;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .stat-item:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto 4rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Section Header Styling */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-subtitle {
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--secondary);
+            letter-spacing: -0.5px;
+        }
+
+        /* Feature Cards Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 5rem;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            padding: 2.2rem 1.8rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-light);
+        }
+
+        .feature-icon-wrapper {
+            width: 56px;
+            height: 56px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 1.3rem;
+        }
+
+        .feature-card h3 {
+            color: var(--secondary);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 5rem;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(2, 132, 199, 0.3);
+        }
+
+        .service-header-icon {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.2rem;
+        }
+
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            background: #f0f9ff;
+            color: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+
+        .service-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 0.3rem 0.7rem;
+            border-radius: 20px;
+        }
+
+        .service-card h3 {
+            color: var(--secondary);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+            margin-bottom: 1.2rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .service-book-btn {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.8rem 1rem;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .service-book-btn:hover {
+            background-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+        }
+
+        /* Modern Booking Section */
+        .booking-section {
+            background: white;
+            padding: 3.5rem 3rem;
+            border-radius: 24px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+            position: relative;
+            margin-bottom: 5rem;
+        }
+
+        .booking-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 24px 24px 0 0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem 1rem 0.9rem 2.8rem;
+            border: 1.5px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-size: 0.95rem;
+            color: var(--secondary);
+            background-color: #f8fafc;
+            transition: all 0.2s ease;
+            outline: none;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+            background-color: #ffffff;
+            box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.12);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .slot-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .slot-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .time-slots {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 10px;
+            margin-top: 0.6rem;
+        }
+
+        .slot-btn {
+            padding: 0.8rem 0.5rem;
+            background-color: #f8fafc;
+            border: 1.5px solid var(--border-color);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-main);
+            transition: all 0.2s ease;
+        }
+
+        .slot-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background-color: var(--primary-light);
+        }
+
+        .slot-btn.selected {
+            background-color: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.1rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 1.05rem;
+            font-weight: 800;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 25px 35px -10px rgba(2, 132, 199, 0.35);
+        }
+
+        .confirmation-message {
+            display: none;
+            margin-top: 1.5rem;
+            padding: 1.2rem;
+            background-color: #f0fdf4;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+            border-radius: var(--radius-md);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        /* ----------------------------------------------------------------- */
+        /* DYNAMIC REVIEWS / TESTIMONIALS SECTION AT THE END                 */
+        /* ----------------------------------------------------------------- */
+        .reviews-section {
+            background: white;
+            padding: 3rem 2.5rem;
+            border-radius: 24px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+
+        .star-rating-input {
+            display: flex;
+            gap: 8px;
+            font-size: 1.4rem;
+            color: #cbd5e1;
+            cursor: pointer;
+            margin-top: 0.3rem;
+        }
+
+        .star-rating-input i.active {
+            color: #f59e0b;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.8rem;
+            margin-top: 2rem;
+        }
+
+        .review-card {
+            background: var(--bg-main);
+            border-radius: var(--radius-lg);
+            padding: 1.8rem;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stars {
+            color: #f59e0b;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .review-text {
+            color: var(--text-main);
+            font-size: 0.95rem;
+            font-style: italic;
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .reviewer-avatar {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .reviewer-details h4 {
+            color: var(--secondary);
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        .reviewer-details span {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        .empty-reviews-notice {
+            text-align: center;
+            padding: 2.5rem 1rem;
+            color: var(--text-muted);
+            font-size: 1rem;
+            background: #f8fafc;
+            border-radius: var(--radius-md);
+            border: 1px dashed var(--border-color);
+            margin-top: 1.5rem;
+        }
+
+        /* Footer Section */
+        .site-footer {
+            background-color: var(--secondary);
+            color: #cbd5e1;
+            padding: 4rem 2rem 2rem 2rem;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr repeat(3, 1fr);
+            gap: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid #334155;
+        }
+
+        .footer-brand p {
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        .footer-column h4 {
+            color: white;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            font-size: 0.95rem;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 1.5rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #1e293b;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 2rem auto 0 auto;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+            .hero h2 {
+                font-size: 2.4rem;
+            }
+            .stats-banner {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .stat-item {
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+                padding-bottom: 1rem;
+            }
+            .stat-item:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .site-header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+            }
+
+            .booking-section, .reviews-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="brand-container">
+            <div class="brand-logo">
+                <i class="fa-solid fa-tooth"></i>
+            </div>
+            <h1 class="brand-title">Dhritvi Advanced <span> Dental care</span></h1>
+        </div>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#features">Why Us</a>
+            <a href="#services">Services</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#booking" class="nav-cta">Book Appointment</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-badge">
+                <i class="fa-solid fa-certificate"></i> Certified Dental Practice Excellence
+            </div>
+            <h2>Modern Dentistry with a <span>Gentle Touch</span></h2>
+            <p>Experience advanced, pain-free dental procedures with cutting-edge technology and tailored specialist care for your whole family.</p>
+            <div class="hero-btns">
+                <a href="#booking" class="btn-primary"><i class="fa-regular fa-calendar-check"></i> Reserve Your Slot</a>
+                <a href="#services" class="btn-secondary">Explore Services</a>
+            </div>
+        </section>
+
+        <!-- Dynamic Statistics Strip -->
+        <div class="stats-banner">
+            <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">10k+</div>
+                <div class="stat-label">Happy Patients</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">99.8%</div>
+                <div class="stat-label">Satisfaction Rate</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Feature Highlights -->
+            <section id="features">
+                <div class="section-header">
+                    <p class="section-subtitle">Our Advantage</p>
+                    <h2 class="section-title">Why Patients Trust Us</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-microscope"></i>
+                        </div>
+                        <h3>Advanced Equipment</h3>
+                        <p>High-precision 3D digital imaging and painless laser treatments designed for minimal recovery time.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <h3>Expert Specialists</h3>
+                        <p>Our board-certified dentists bring global clinical experience and gentle care to every patient visit.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-shield-heart"></i>
+                        </div>
+                        <h3>Sterile Environment</h3>
+                        <p>Strict hospital-grade sterilization protocol ensuring complete safety and hygienic care standards.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Detailed Services Section -->
+            <section id="services">
+                <div class="section-header">
+                    <p class="section-subtitle">Specialized Care</p>
+                    <h2 class="section-title">Our Clinical Services</h2>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <div>
+                            <div class="service-header-icon">
+                                <div class="service-icon"><i class="fa-solid fa-stethoscope"></i></div>
+                                <span class="service-tag">Preventive</span>
+                            </div>
+                            <h3>General Checkup</h3>
+                            <p>Comprehensive oral exam, digital X-rays, and preventive screenings to catch dental issues early.</p>
+                        </div>
+                        <div>
+                            <div class="service-meta">
+                                <span><i class="fa-regular fa-clock"></i> 30 Mins</span>
+                                <span><i class="fa-solid fa-check"></i> Exam Included</span>
+                            </div>
+                            <button type="button" class="service-book-btn" onclick="selectServiceAndScroll('General Checkup')">
+                                Book Checkup <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card">
+                        <div>
+                            <div class="service-header-icon">
+                                <div class="service-icon"><i class="fa-solid fa-sparkles"></i></div>
+                                <span class="service-tag">Hygiene</span>
+                            </div>
+                            <h3>Teeth Cleaning</h3>
+                            <p>Ultrasonic scaling and deep polishing to eliminate tough tartar, plaque, and dark surface stains.</p>
+                        </div>
+                        <div>
+                            <div class="service-meta">
+                                <span><i class="fa-regular fa-clock"></i> 45 Mins</span>
+                                <span><i class="fa-solid fa-check"></i> Deep Clean</span>
+                            </div>
+                            <button type="button" class="service-book-btn" onclick="selectServiceAndScroll('Teeth Cleaning')">
+                                Book Cleaning <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card">
+                        <div>
+                            <div class="service-header-icon">
+                                <div class="service-icon"><i class="fa-solid fa-kit-medical"></i></div>
+                                <span class="service-tag">Therapy</span>
+                            </div>
+                            <h3>Root Canal Treatment</h3>
+                            <p>Pain-free root canal endodontic procedures structured to save deeply decayed teeth quickly.</p>
+                        </div>
+                        <div>
+                            <div class="service-meta">
+                                <span><i class="fa-regular fa-clock"></i> 60 Mins</span>
+                                <span><i class="fa-solid fa-check"></i> Pain Relief</span>
+                            </div>
+                            <button type="button" class="service-book-btn" onclick="selectServiceAndScroll('Root Canal Treatment')">
+                                Book Root Canal <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card">
+                        <div>
+                            <div class="service-header-icon">
+                                <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                                <span class="service-tag">Cosmetic</span>
+                            </div>
+                            <h3>Teeth Whitening</h3>
+                            <p>In-office laser whitening treatment yielding immediate 3-5 shade brighter smile results.</p>
+                        </div>
+                        <div>
+                            <div class="service-meta">
+                                <span><i class="fa-regular fa-clock"></i> 45 Mins</span>
+                                <span><i class="fa-solid fa-check"></i> Instant Shine</span>
+                            </div>
+                            <button type="button" class="service-book-btn" onclick="selectServiceAndScroll('Teeth Whitening')">
+                                Book Whitening <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="service-card">
+                        <div>
+                            <div class="service-header-icon">
+                                <div class="service-icon"><i class="fa-solid fa-tooth"></i></div>
+                                <span class="service-tag">Surgical</span>
+                            </div>
+                            <h3>Dental Implants</h3>
+                            <p>Permanent titanium implants designed to replace missing teeth naturally and preserve jaw integrity.</p>
+                        </div>
+                        <div>
+                            <div class="service-meta">
+                                <span><i class="fa-regular fa-clock"></i> 60+ Mins</span>
+                                <span><i class="fa-solid fa-check"></i> Permanent</span>
+                            </div>
+                            <button type="button" class="service-book-btn" onclick="selectServiceAndScroll('Dental Implants')">
+                                Book Implant <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Booking Form Section -->
+            <section id="booking" class="booking-section">
+                <div class="section-header" style="margin-bottom: 2.5rem;">
+                    <p class="section-subtitle">Easy Online Scheduling</p>
+                    <h2 class="section-title">Reserve Your Dental Appointment</h2>
+                </div>
+
+                <form id="appointmentForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="text" id="fullName" name="fullName" required placeholder="Name">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-envelope"></i>
+                                <input type="email" id="email" name="email" required placeholder="XYZ@example.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-phone"></i>
+                                <input type="tel" id="phone" name="phone" required placeholder="(+91) 456-7890">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="service">Required Service</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-notes-medical"></i>
+                                <select id="service" name="service" required>
+                                    <option value="">Select treatment service</option>
+                                    <option value="General Checkup">General Checkup</option>
+                                    <option value="Teeth Cleaning">Teeth Cleaning</option>
+                                    <option value="Root Canal Treatment">Root Canal Treatment</option>
+                                    <option value="Teeth Whitening">Teeth Whitening</option>
+                                    <option value="Dental Implants">Dental Implants</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookingDate">Preferred Date</label>
+                            <input type="date" id="bookingDate" name="bookingDate" required style="padding-left: 2.8rem;">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="slot-label">
+                            <label>Choose Preferred Time Slot</label>
+                            <span class="slot-subtitle">Real-time availability</span>
+                        </div>
+                        <div class="time-slots" id="timeSlots">
+                            <button type="button" class="slot-btn" data-time="09:00 AM">09:00 AM</button>
+                            <button type="button" class="slot-btn" data-time="10:00 AM">10:00 AM</button>
+                            <button type="button" class="slot-btn" data-time="11:00 AM">11:00 AM</button>
+                            <button type="button" class="slot-btn" data-time="02:00 PM">02:00 PM</button>
+                            <button type="button" class="slot-btn" data-time="03:00 PM">03:00 PM</button>
+                            <button type="button" class="slot-btn" data-time="04:00 PM">04:00 PM</button>
+                        </div>
+                        <input type="hidden" id="selectedTime" name="selectedTime" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fa-solid fa-circle-check"></i> Complete Appointment Booking
+                    </button>
+                </form>
+
+                <div id="confirmationMessage" class="confirmation-message">
+                    ✓ Your appointment request has been sent! Our dental coordinator and dev logs have been updated.
+                </div>
+            </section>
+
+            <!-- Dynamic Patient Reviews Section -->
+            <section id="reviews" class="reviews-section">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <p class="section-subtitle">Community Feedback</p>
+                    <h2 class="section-title">Patient Reviews (<span id="reviewCount">0</span>)</h2>
+                </div>
+
+                <!-- Review Submission Form -->
+                <form id="reviewForm" style="margin-bottom: 2.5rem; background: #f8fafc; padding: 1.8rem; border-radius: 12px; border: 1px solid var(--border-color);">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem; font-size: 1.1rem; font-weight: 700;">Share Your Thoughts & Review</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reviewerName">Your Name</label>
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-user"></i>
+                                <input type="text" id="reviewerName" placeholder="e.g. Ashish Kumar" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Rating</label>
+                            <div class="star-rating-input" id="starInput">
+                                <i class="fa-solid fa-star active" data-rating="1"></i>
+                                <i class="fa-solid fa-star active" data-rating="2"></i>
+                                <i class="fa-solid fa-star active" data-rating="3"></i>
+                                <i class="fa-solid fa-star active" data-rating="4"></i>
+                                <i class="fa-solid fa-star active" data-rating="5"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reviewComment">Your Review</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-comment-dots" style="top: 1.2rem;"></i>
+                            <textarea id="reviewComment" placeholder="Write your experience at Dhritvi Dental..." required></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary" style="border: none; cursor: pointer; font-size: 0.95rem; padding: 0.8rem 1.6rem;">
+                        <i class="fa-regular fa-paper-plane"></i> Submit Review
+                    </button>
+                </form>
+
+                <!-- Reviews Grid Container -->
+                <div id="reviewsGrid" class="reviews-grid"></div>
+
+                <!-- Default Notice When Reviews = 0 -->
+                <div id="emptyReviewsNotice" class="empty-reviews-notice">
+                    <i class="fa-regular fa-star" style="font-size: 1.8rem; margin-bottom: 0.5rem; display: block; color: #cbd5e1;"></i>
+                    No reviews submitted yet. Be the first to share your experience above!
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="brand-container">
+                    <div class="brand-logo">
+                        <i class="fa-solid fa-tooth"></i>
+                    </div>
+                    <h1 class="brand-title" style="color: white;">Dhritvi <span>Dental</span></h1>
+                </div>
+                <p>Providing exceptional, personalized dental care solutions with state-of-the-art procedures and compassionate patient support.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://whatsapp.com" target="_blank" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Why Us</a></li>
+                    <li><a href="#services">Clinical Services</a></li>
+                    <li><a href="#booking">Book Slot</a></li>
+                    <li><a href="#reviews">Patient Reviews</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Working Hours</h4>
+                <ul>
+                    <li>Mon - Fri: 9:00 AM - 7:00 PM</li>
+                    <li>Saturday: 9:00 AM - 4:00 PM</li>
+                    <li>Sunday: Emergency Only</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Clinic Location</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> VPO,GHALUWAL HAROLI ROAD,BHADSALI HAR,H.P</li>
+                    <li><i class="fa-solid fa-phone"></i> +91(2584 68558)</li>
+                    <li><i class="fa-regular fa-envelope"></i> care@dhritvidental.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dhritvi Advanced Dental Care. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('bookingDate').min = new Date().toISOString().split('T')[0];
+
+        // Slot buttons logic
+        const slotButtons = document.querySelectorAll('.slot-btn');
+        const hiddenTimeInput = document.getElementById('selectedTime');
+
+        slotButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                slotButtons.forEach(btn => btn.classList.remove('selected'));
+                button.classList.add('selected');
+                hiddenTimeInput.value = button.getAttribute('data-time');
+            });
+        });
+
+        function selectServiceAndScroll(serviceName) {
+            const serviceSelect = document.getElementById('service');
+            serviceSelect.value = serviceName;
+            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Booking Form Submission
+        const form = document.getElementById('appointmentForm');
+        const confirmationMessage = document.getElementById('confirmationMessage');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            if (!hiddenTimeInput.value) {
+                alert('Please select a time slot.');
+                return;
+            }
+
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service: document.getElementById('service').value,
+                date: document.getElementById('bookingDate').value,
+                timeSlot: hiddenTimeInput.value,
+                timestamp: new Date().toISOString()
+            };
+
+            notifyDeveloper(formData);
+
+            confirmationMessage.style.display = 'block';
+            form.reset();
+            slotButtons.forEach(btn => btn.classList.remove('selected'));
+        });
+
+        function notifyDeveloper(bookingDetails) {
+            console.log('--- NEW DENTAL BOOKING RECEIVED ---');
+            console.table(bookingDetails);
+        }
+
+        // Interactive Star Rating for Reviews
+        let currentRating = 5;
+        const stars = document.querySelectorAll('#starInput i');
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                currentRating = parseInt(this.getAttribute('data-rating'));
+                stars.forEach((s, idx) => {
+                    if (idx < currentRating) {
+                        s.classList.add('active');
+                    } else {
+                        s.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Review Form Submission & Dynamic Rendering
+        let reviewsList = [];
+        const reviewForm = document.getElementById('reviewForm');
+        const reviewsGrid = document.getElementById('reviewsGrid');
+        const emptyReviewsNotice = document.getElementById('emptyReviewsNotice');
+        const reviewCountEl = document.getElementById('reviewCount');
+
+        reviewForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('reviewerName').value.trim();
+            const comment = document.getElementById('reviewComment').value.trim();
+
+            if (!name || !comment) return;
+
+            const initials = name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2) || 'P';
+
+            const newReview = {
+                name: name,
+                initials: initials,
+                rating: currentRating,
+                comment: comment
+            };
+
+            reviewsList.unshift(newReview);
+            renderReviews();
+            reviewForm.reset();
+
+            // Reset star input back to 5
+            currentRating = 5;
+            stars.forEach(s => s.classList.add('active'));
+        });
+
+        function renderReviews() {
+            reviewCountEl.textContent = reviewsList.length;
+
+            if (reviewsList.length === 0) {
+                emptyReviewsNotice.style.display = 'block';
+                reviewsGrid.innerHTML = '';
+                return;
+            }
+
+            emptyReviewsNotice.style.display = 'none';
+            reviewsGrid.innerHTML = reviewsList.map(rev => {
+                let starIcons = '';
+                for (let i = 1; i <= 5; i++) {
+                    if (i <= rev.rating) {
+                        starIcons += '<i class="fa-solid fa-star"></i> ';
+                    } else {
+                        starIcons += '<i class="fa-regular fa-star"></i> ';
+                    }
+                }
+
+                return `
+                    <div class="review-card">
+                        <div>
+                            <div class="stars">${starIcons}</div>
+                            <p class="review-text">"${rev.comment}"</p>
+                        </div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">${rev.initials}</div>
+                            <div class="reviewer-details">
+                                <h4>${rev.name}</h4>
+                                <span>Patient Review</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Initialize display with 0 reviews
+        renderReviews();
+    </script>
+</body>
+
+</html>
